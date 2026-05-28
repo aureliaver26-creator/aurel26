@@ -17,10 +17,10 @@
             <form class="register-form" id="registerForm" novalidate>
                 <div class="form-group">
                     <div class="input-wrapper">
+                    <label for="username">Nama Pengguna</label>
                         <input type="text" id="username" name="username" required autocomplete="Username">
-                        <label for="username">Nama Pengguna</label>
+                    <label for="username">Email</label>
                         <input type="email" id="email" name="email" required autocomplete="Email">
-                        <label for="username">Email</label>
                         <span class="focus-border"></span>
                     </div>
                     <span class="error-message" id="emailError"></span>
@@ -28,8 +28,8 @@
 
                 <div class="form-group">
                     <div class="input-wrapper password-wrapper">
+                     <label for="password">Kata Sandi</label>
                         <input type="password" id="password" name="password" required autocomplete="current-password">
-                        <label for="password">Kata Sandi</label>
                         <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
                             <span class="eye-icon"></span>
                         </button>
@@ -85,6 +85,6 @@
    <p id="message"></p>
 </form>
 
-<script src="js/register.js"defer></script>
+<script src="js/register.js" defer></script>
 </body>
 </html>
