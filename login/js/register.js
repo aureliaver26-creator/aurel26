@@ -15,40 +15,45 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     const data = await res.json();
 
+    // ambil data user dari localStorage
+    const savedUser = JSON.parse(localStorage.getItem("savedUser"));
+
     if (data.status === "success") {
-        document.getElementById("message").innerText = "Registrasi berhasil, silakan login";
-        window.location.href = "index.html";
+
+        document.getElementById("message").innerText =
+            "Registrasi berhasil, silakan login";
+
+        if (
+            (
+                username === "user1" &&
+                email === "user@gmail.com" &&
+                password === "123"
+            )
+
+            ||
+
+            (
+                savedUser &&
+                username === savedUser.username &&
+                email === savedUser.email &&
+                password === savedUser.password
+            )
+        ) {
+
+            localStorage.setItem("loggedInUser", username);
+
+            alert("Registrasi berhasil!");
+
+            window.location.href = "../index.html";
+
+        }
+
     } else {
-        document.getElementById("message").innerText = data.message || "Gagal registrasi";
+
+        document.getElementById("message").innerText =
+            data.message || "Gagal registrasi";
+
+        alert("Username telah digunakan!");
+
     }
-
-    if(
-        (username === "user1" &&
-         email === "user@gmail.com" &&
-         password === "123")
-
-    ||
-
-    (
-        savedUSer &&
-        username === savedUser.username &&
-        email === savedUser.email &&
-        password === savedUser.password
-    )
-
-    ){
-        localStorage.setItem(
-            "loggedInUser",
-            username
-        );
-
-        alert("Registrasi berhasil!");
-
-         window.location.href = "index.html";
-
-    }else{
-
-        alert{
-            "Username telah digunakan!"
-        ):
 });
