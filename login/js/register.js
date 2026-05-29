@@ -44,7 +44,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
             alert("Registrasi berhasil!");
 
-            window.location.replace("index.html");
+            window.location.href="index.html";
 
         }
 
