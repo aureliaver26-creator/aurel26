@@ -21,7 +21,8 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     if (data.status === "success") {
 
         document.getElementById("message").innerText =
-            "Registrasi berhasil, silakan login";
+            "Registrasi berhasil, silakan login"
+        window.location.herf="index.html";
 
         if (
             (
