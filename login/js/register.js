@@ -21,9 +21,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     if (data.status === "success") {
 
         document.getElementById("message").innerText =
-            "Registrasi berhasil, silakan login"
-        setTimeout(()=>{
-         window.location.href="index.html";},2000);
+            "Registrasi berhasil, silakan login";  
     }
 
         if (
@@ -46,8 +44,10 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             localStorage.setItem("loggedInUser", username);
 
             alert("Registrasi berhasil!");
-
-            window.location.href="index.html";
+            
+            setTimeout(()=>{
+              window.location.href="index.html";
+            },1000);
 
         }
 
