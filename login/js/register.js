@@ -22,7 +22,8 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
         document.getElementById("message").innerText =
             "Registrasi berhasil, silakan login"
-        window.location.href="index.html";
+        setTimeout(()=>{
+         window.location.href="index.html";},2000);
     }
 
         if (
