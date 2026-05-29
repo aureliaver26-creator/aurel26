@@ -22,7 +22,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
         document.getElementById("message").innerText =
             "Registrasi berhasil, silakan login"
-        window.location.herf="index.html";
+        window.location.href="index.html";
 
         if (
             (
