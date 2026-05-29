@@ -24,7 +24,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     if(
         (username === "user1" &&
-         email === user@gmail.com &&
+         email === "user@gmail.com" &&
          password === "123")
 
     ||
@@ -32,7 +32,8 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     (
         savedUSer &&
         username === savedUser.username &&
-        email === savedUser.password
+        email === savedUser.email &&
+        password === savedUser.password
     )
 
     ){
@@ -41,10 +42,9 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             username
         );
 
-        alert(Registrasi berhasil!);
+        alert("Registrasi berhasil!");
 
-        window.location.href =
-        "../index.html";
+         window.location.href = "index.html";
 
     }else{
 
