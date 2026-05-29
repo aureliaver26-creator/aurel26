@@ -21,4 +21,34 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     } else {
         document.getElementById("message").innerText = data.message || "Gagal registrasi";
     }
+
+    if(
+        (username === "user1" &&
+         email === user@gmail.com &&
+         password === "123")
+
+    ||
+
+    (
+        savedUSer &&
+        username === savedUser.username &&
+        email === savedUser.password
+    )
+
+    ){
+        localStorage.setItem(
+            "loggedInUser",
+            username
+        );
+
+        alert(Registrasi berhasil!);
+
+        window.location.href =
+        "../index.html";
+
+    }else{
+
+        alert{
+            "Username telah digunakan!"
+        ):
 });
