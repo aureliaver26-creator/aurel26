@@ -27,10 +27,6 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const alertBox = document.getElementById("alertBox");
     alertBox.innerText = "Username atau Password salah, silahkan coba lagi";
     alertBox.style.display = "block";
-
-    setTimeout(() => {
-        alertBox.style.display = "none";
-    }, 3000);
 } 
    
 });
