@@ -25,21 +25,14 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     }
 
         if (
-            (
-                username === "user1" &&
-                email === "user@gmail.com" &&
-                password === "123"
-            )
-
-            ||
-
-            (
+            
                 savedUser &&
                 username === savedUser.username &&
                 email === savedUser.email &&
                 password === savedUser.password
-            )
-        ) {
+            
+        ) 
+        {
 
             localStorage.setItem("loggedInUser", username);
 
