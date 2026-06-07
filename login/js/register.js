@@ -15,41 +15,10 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     const data = await res.json();
 
-    // ambil data user dari localStorage
-    const savedUser = JSON.parse(localStorage.getItem("savedUser"));
-
     if (data.status === "success") {
-
-        document.getElementById("message").innerText =
-            "Registrasi berhasil, silakan login";  
-    }
-
-        if (
-            
-                savedUser &&
-                username === savedUser.username &&
-                email === savedUser.email &&
-                password === savedUser.password
-            
-        ) 
-        {
-
-            localStorage.setItem("loggedInUser", username);
-
-            alert("Registrasi berhasil!");
-            
-            setTimeout(()=>{
-              window.location.href="index.html";
-            },1000);
-
-        }
-
+        document.getElementById("message").innerText = "Registrasi berhasil, silakan login";
+        window.location.href = "index.html";
     } else {
-
-        document.getElementById("message").innerText =
-            data.message || "Gagal registrasi";
-
-        alert("Username telah digunakan!");
-
+        document.getElementById("message").innerText = data.message || "Gagal registrasi";
     }
 });
